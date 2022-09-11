@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Nunito+Sans:wght@300;600;800&display=swap");
+
+/* Main body style*/
+
+body {
+    background-color: #fafafa;
+    font-size: 14px;
+    width: 100%;
+    height: 100vh;
+    color: #111517;
+  }
+  * {
+    box-sizing: border-box;
+    font-family: "Nunito Sans";
+    padding: 0;
+    margin: 0;
+  }
+ a {
+    text-decoration: none;
+    color: #111517;
+ }
+
+/*Flex Break new row*/
+
+.break {
+  flex-basis: 100%;
+  height: 0;
+  padding: 2%;
+}
+
+/*Header box style*/
+
+ header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fafafa;
+    height: 50px;
+    padding: 30px 50px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.075);
+  }
+  .headbar h1 {
+    font-size: 20px;
+    font-weight: 800;
+  }
+  .darktheme{
+    cursor: pointer;
+  }
+  .darktheme p {
+    font-weight: 800;
+  }
+  .darktheme i {
+    margin-right: 5px;
+  }
+
+/*Search bar style*/
+
+  .search-bar .search-box {
+    width: 450px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    background: #ffffff;
+    border-radius: 5px;
+    padding: 0 25px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    margin-top: 2%;
+    margin-right: 3%;
+    margin-left: 3%;
+  }
+  .search-btn {
+    background: none;
+    border: none;
+    outline: none;
+    margin-right: 15px;
+  }
+  .search-btn .fa {
+    color: #858585;
+  }
+  .search {
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+  }
+  
+/*Filter Button style*/
+
+  .filter {
+    width: 200px;
+    height: 50px;
+    background: #ffffff;
+    border-radius: 5px;
+    padding: 17px 25px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    position: relative;
+    margin-left: auto;
+    margin-right: 3%;
+    margin-bottom: auto;
+  }
+  .filter .filter-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    width: 100%;
+  }
+  .filter .filter-btn{
+    border: none;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+  }
+  
+  .dropdownlist {
+    display: flex;
+    background: #ffffff;
+    margin-top: 3px;
+    border-radius: 5px;
+    padding: 10px 15px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    width: 100%;
+  }
+
+  .dropdownlist ul li {
+    list-style: none;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+  .filter .dropdownlist  {
+    display: block;
+    pointer-events: none;
+    transition: 0.3s;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 100%;
+  }
+  .filter-btn:focus + .dropdownlist {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 1;
+  }
+
+/*Countries Style*/
+
+  .countries {
+    margin: 3%;
+  }
+  .row {
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+  }
+
+  .country-info {
+    min-height: 400px;
+    background: #ffffff;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; 
+  }
+  .country-info:hover{
+    transition: 0.3s;
+    transform: scale(1.03);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  }
+  .country-info .item-img {
+    height: 200px;
+  }
+  .item-img img {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  .country-info .country-details {
+    width: 100%;
+    padding: 35px 15px 35px;
+  }
+  .country-info .country-details .item-name {
+    padding: 0 0 15px;
+  }
+  
+  .country-info .country-details .item-info p {
+    margin-bottom: 5px;
+    font-weight: 600;
+  }
+  .country-info .country-details .item-info p span {
+    font-weight: 500;
+  }
+  
+  
+@media (max-width: 768px) {
+  header {
+    padding: 30px 20px;
+  }
+  main {
+    margin-top: 25px;
+    padding: 0 20px;
+  }
+}
+@media (max-width: 706px) {
+  .filter {
+    margin-top: 35px;
+  }
+}
+
+@media (max-width: 375px) {
+  header {
+    padding: 30px 10px;
+  }
+  main {
+    margin-top: 25px;
+    padding: 0 10px;
+  }
+  .country-info {
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+}
