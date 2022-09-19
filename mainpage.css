@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow&family=Nunito+Sans:wght@300;600;800&display=swap");
+
+body {
+    background-color: #fafafa;
+    font-size: 14px;
+    width: 100%;
+    height: 100%;
+    color: #111517;
+    white-space: nowrap;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+  * {
+    box-sizing: border-box;
+    font-family: "Nunito Sans";
+  }
+ a {
+    color: #111517;
+ }
+
+ header{
+ padding-right: 3%;
+ padding-left: 3%;
+ box-shadow: 0 4px 2px -2px lightgray;
+ }
+  .headbar h1 {
+    font-weight: 800;
+    font-style: bold;
+  }
+  .headbar nav {
+    font-family: "Nunito Sans";
+  }
+ 
+.search-and-filter{
+    padding: 2%;
+}
+
+section{
+    padding-right: 3%;
+    padding-left: 3%;
+}
+
+.has-search .form-control {
+    padding-left: 2.5rem;
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    line-height: 1rem;
+    text-align: center;
+    pointer-events: none;
+    color: #858585;
+    padding-top:  0.6rem;
+    padding-left: 0.6rem;
+}
+
+section{
+    padding-top: 2%;
+}
+
+.cardtext{
+  overflow-x: hidden;
+  font-size: 14px;
+}
