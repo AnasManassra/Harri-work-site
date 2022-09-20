@@ -16,8 +16,22 @@ body {
   }
  a {
     color: #111517;
+    text-decoration: none;
  }
-
+ a:link{
+  color: #111517;
+ }
+ a:visited{
+  color: #111517;
+ }
+ a:hover{
+  color: #111517 !important;
+  text-decoration: none !important;
+ }
+ a:active{
+  color: #111517;
+  text-decoration: none;
+ }
  header{
  padding-right: 3%;
  padding-left: 3%;
