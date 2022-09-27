@@ -1,82 +1,187 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow&family=Nunito+Sans:wght@300;600;800&display=swap");
 
+/*Variables*/
+:root {
+  --very-dark-blue: #111517;
+  --dark-grey: #858585;
+  --very-light-gray: #fafafa;
+  --white: #ffffff;
+
+  --weight-small: 300;
+  --weight-medium: 600;
+  --weight-heavy: 800;
+
+  --font-main: "Nunito Sans", sans-serif;
+
+  --border-radius: 0.3rem;
+
+  --box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/*Overall Style*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-main);
+  color: var(--very-dark-blue);
+}
 body {
-    background-color: #fafafa;
-    font-size: 14px;
-    width: 100%;
-    height: 100%;
-    color: #111517;
-    white-space: nowrap;
-    overflow-x: hidden;
-    overflow-y: scroll;
-  }
-  * {
-    box-sizing: border-box;
-    font-family: "Nunito Sans";
-  }
- a {
-    color: #111517;
-    text-decoration: none;
- }
- a:link{
-  color: #111517;
- }
- a:visited{
-  color: #111517;
- }
- a:hover{
-  color: #111517 !important;
-  text-decoration: none !important;
- }
- a:active{
-  color: #111517;
+  background-color: var(--light-gray);
+}
+.boxShadow {
+  box-shadow: var(--box-shadow);
+}
+.borderRadius {
+  border-radius: 0.3rem;
+}
+.link {
   text-decoration: none;
- }
- header{
- padding-right: 3%;
- padding-left: 3%;
- box-shadow: 0 4px 2px -2px lightgray;
- }
-  .headbar h1 {
-    font-weight: 800;
-    font-style: bold;
-  }
-  .headbar nav {
-    font-family: "Nunito Sans";
-  }
- 
-.search-and-filter{
-    padding: 2%;
+  color: inherit;
 }
 
-section{
-    padding-right: 3%;
-    padding-left: 3%;
+.link:hover {
+  text-decoration: none;
+  color: inherit;
 }
 
+/*Headbar*/
+
+.headbar{
+  padding-left: 1.5%;
+  padding-right: 1.5%;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+}
+.headbar nav {
+  font-family: "Nunito Sans";
+}
+header {
+  background-color: var(--white);
+  box-shadow: 0 4px 2px -1px lightgrey;
+}
+.dark-theme {
+  color: var(--dark-grey);
+}
+.dark-theme button {
+  border-style: none;
+  background-color: var(--white);
+  color: inherit;
+}
+.dark-theme span {
+  font-size: 12px;
+  font-weight: var(--weight-medium);
+}
+.dark-theme i {
+  font-size: 12px;
+}
+
+/*Search and Filter*/
 .has-search .form-control {
-    padding-left: 2.5rem;
+  padding-left: 2.5rem;
+  border: none;
+  box-shadow: var(--box-shadow);
+  font-family: "Nunito Sans";
+  font-size: 14px;
+  width: 350px;
 }
 
 .has-search .form-control-feedback {
-    position: absolute;
-    z-index: 2;
-    display: block;
-    width: 1rem;
-    height: 1rem;
-    line-height: 1rem;
-    text-align: center;
-    pointer-events: none;
-    color: #858585;
-    padding-top:  0.6rem;
-    padding-left: 0.6rem;
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  line-height: 1rem;
+  text-align: center;
+  pointer-events: none;
+  color: var(--white);
+  padding-top:  0.6rem;
+  padding-left: 0.6rem;
 }
 
-section{
-    padding-top: 2%;
+.mainPage{
+  padding-left: 3%;
+  padding-right: 3%;
+}
+
+.search-and-filter{
+  padding-top: 3rem;
+  flex-wrap: wrap;
+}
+
+.dropdown {
+  position: relative;
+  display: block;
+  margin: 10px;
+  background-color: var(--white);
+  width: 200px;
+  height: 35px;
+}
+.dropbtn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding-left: 3%;
+  padding-right: 3%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.dropbtn i {
+  margin-left: 2.5rem;
+  font-size: 0.25rem;
+  width: fit-content;
+}
+.dropbtn span {
+  font-weight: var(--weight-small);
+  font-size: 14px;
+  color: var(--dark-grey);
+
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  padding-left: 3%;
+  padding-right: 3%;
+  background-color: var(--white);
+  overflow: hidden;
+}
+.dropdown-content a{
+  text-decoration: none;
+  color: var(--dark-grey);
+}
+.dropdown-content a:hover {
+  background-color: var(--very-light-gray);
+  color: var(--dark-grey);
+  text-decoration: none;
+  overflow: hidden;
+}
+.dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+
+.gridContainer {
+  margin-top: 3rem;
+}
+
+.row {
+  margin-left: 3%;
+  margin-right: 3%;
 }
 
 .cardtext{
-  overflow-x: hidden;
   font-size: 14px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
 }
+
+
+

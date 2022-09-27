@@ -5,162 +5,67 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="mainpage.css" /> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="mainpage.css"/> 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/715848f8aa.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap" rel="stylesheet"/>
     <title>Where in the World?</title>
 </head>
 
 <!--Body-->
 
-<body class="body">
-
-    <!--Header-->
-
-    <header class="header">
-      <nav class="navbar">
-        <div class="container-fluid">
-          <h1>Where in the world?</h1>
-          <a href="#" class="stretched-link"><i class="fa-regular fa-moon"></i>Dark Mode</a>
-        </div>
-          
-        </div>
-      </nav>
-      </header>
-
-    <section class="text-center">
-      <div class="container-fluid search-and-filter">
-        <div class="input-group d-flex justify-content-between align-items-baseline">
-          <div class="form-group has-search w-25">
-            <span class="fa-solid fa-magnifying-glass form-control-feedback"></span>
-            <input type="text" class="form-control" placeholder="Search for country...">
-          </div>
-          <div class="dropdown">
-            <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Filter by Region
-            </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenu">
-              <li><a class="dropdown-item">Africa</a></li>
-              <li><a class="dropdown-item">America</a></li>
-              <li><a class="dropdown-item">Asia</a></li>
-              <li><a class="dropdown-item">Europe</a></li>
-              <li><a class="dropdown-item">Oceania</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section>
+<body>
+  <header class="headbar">
+    <nav class="navbar">
       <div class="container-fluid">
-        <div class="row align-items-center">
-
-          <div class="col-md mb-3">
-            <div class="card cardtext" style="width: 18rem;">
-              <img class="card-img-top" src="flags/de.svg" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title"><strong>Germany</strong></h5>
-                <p class="card-text"><strong>Population:</strong> 81,770,900
-                  <br><strong>Region:</strong> Europe
-                  <br><strong>Capital:</strong> Berlin
-                </p>
-                 
-                
-                <a href="details.html" class="stretched-link"></a>
-              </div>
-            </div></div>
-
-          <div class="col-md mb-3"><div class="card cardtext" style="width: 18rem;">
-            <img class="card-img-top" src="flags/us.svg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title"><strong>United States of America</strong></h5>
-                <p class="card-text"><strong>Population:</strong> 323,947,000
-                  <br><strong>Region:</strong> Americas
-                  <br><strong>Capital:</strong> Washington, D.C. 
-                </p>
-              <a href="#" class="stretched-link"></a>
-            </div>
-          </div></div>
-
-          <div class="col-md mb-3"><div class="card cardtext" style="width: 18rem;">
-            <img class="card-img-top" src="flags/br.svg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title"><strong>Brazil</strong></h5>
-                <p class="card-text"><strong>Population:</strong> 206,135,893
-                  <br><strong>Region:</strong> Americas
-                  <br><strong>Capital:</strong> Brasilia
-                </p>
-              <a href="#" class="stretched-link"></a>
-            </div>
-          </div></div>
-
-          <div class="col-md mb-3"><div class="card cardtext" style="width: 18rem;">
-            <img class="card-img-top" src="flags/is.svg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title"><strong>Iceland</strong></h5>
-                <p class="card-text"><strong>Population:</strong> 334,300
-                  <br><strong>Region:</strong> Europe
-                  <br><strong>Capital:</strong> Reykjavik
-                </p>
-              <a href="#" class="stretched-link"></a>
-            </div>
-          </div></div>
-
-          <div class="w-100"></div>
-
-          <div class="col-md mb-3"><div class="card cardtext" style="width: 18rem;">
-            <img class="card-img-top" src="flags/af.svg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title"><strong>Afghanistan</strong></h5>
-              <p class="card-text"><strong>Population:</strong> 27,657,145
-                <br><strong>Region:</strong> Asia
-                <br><strong>Capital:</strong> Kabul
-              </p>
-              <a href="#" class="stretched-link"></a>
-            </div>
-          </div></div>
-
-          <div class="col-md mb-3"><div class="card cardtext" style="width: 18rem;">
-            <img class="card-img-top" src="flags/ax.svg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title"><strong>Aland Islands</strong></h5>
-                <p class="card-text"><strong>Population:</strong> 28,875
-                  <br><strong>Region:</strong> Europe
-                  <br><strong>Capital:</strong> Mariehamn
-                </p>
-              <a href="#" class="stretched-link"></a>
-            </div>
-          </div></div>
-
-          <div class="col-md mb-3"><div class="card cardtext" style="width: 18rem;">
-            <img class="card-img-top" src="flags/al.svg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title"><strong>Albania</strong></h5>
-                <p class="card-text"><strong>Population:</strong> 2,886,026
-                  <br><strong>Region:</strong> Europe
-                  <br><strong>Capital:</strong> Tirana
-                </p>
-              <a href="#" class="stretched-link"></a>
-            </div>
-          </div></div>
-
-          <div class="col-md mb-3"><div class="card cardtext" style="width: 18rem;">
-            <img class="card-img-top" src="flags/dz.svg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title"><strong>Algeria</strong></h5>
-                <p class="card-text"><strong>Population:</strong> 40,400,000
-                  <br><strong>Region:</strong> Africa
-                  <br><strong>Capital:</strong> Algiers
-                </p>
-              <a href="#" class="stretched-link"></a>
-            </div>
-          </div></div>
-
+        <h1>Where in the world?</h1>
+        <div class="dark-theme">
+          <i class="fa-regular fa-moon"></i>
+          <button class="dark-themeButton">
+            <span>Dark Mode</span>
+          </button>
         </div>
       </div>
-    </section>
-    
+
+      </div>
+    </nav>
+    </header>
+
+  <main class="mainPage">
+    <div class="search-and-filter d-flex justify-content-between align-items-baseline">
+        <div class="form-group has-search">
+          <span class="fa-solid fa-magnifying-glass form-control-feedback"></span>
+          <input type="text" class="form-control" placeholder="Search for a country...">
+        </div>
+      <div class="dropdown boxShadow borderRadius">
+        <div class="dropbtn">
+          <span>Filter by Region</span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </div>
+        <div class="dropdown-content borderRadius boxShadow">
+          <a href="#" class="dropdownItem">All</a>
+          <a href="#" class="dropdownItem">Africa</a>
+          <a href="#" class="dropdownItem">Americas</a>
+          <a href="#" class="dropdownItem">Asia</a>
+          <a href="#" class="dropdownItem">Europe</a>
+          <a href="#" class="dropdownItem">Oceania</a>
+        </div>
+      </div>
+    </div>
+    <div id="card-area"></div>
+    <div class="error">loading...</div>
+    <div class="gridContainer">
+      <div class="row g-5">
+        
+    </div>
+    </div>
+  </main>
+
+    <script src="main.js"></script>
 </body>
