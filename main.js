@@ -1,4 +1,5 @@
 let countries = [];
+let timeout = null;
 getCountries();
 
 async function getCountry(name) {
@@ -55,13 +56,18 @@ function displayCountries(arrayCountries){
             arrayCountries[i].population
         );
       }
+      const cards = document.querySelectorAll(".card");
+  cards.forEach((card) =>
+    card.addEventListener("click", (event) => {
+      localStorage.setItem("name", card.children[1].children[0].innerText);})
+  );
 }
 
 function buildCard(name, capital, region, flag, population) {
     let countryContainer = document.getElementsByClassName("row")[0];
     let innerText = ` <div class="col-md mb-3">
-    <div class="card cardtext" style="width: 300px; height:350px">
-      <img class="card-img-top" src="${flag}" alt="Card image cap">
+    <div class="card cardtext cardColor" style="width: 300px; height:350px">
+      <img class="card-img-top imgSize" src="${flag}" alt="Card image cap">
       <div class="card-body">
         <h5 class="card-title"><strong>${name}</strong></h5>
         <p class="card-text"><strong>Population:</strong> ${population}
@@ -76,8 +82,15 @@ function buildCard(name, capital, region, flag, population) {
      
   `;
   
-    var newDiv = document.createElement("div");
+    let newDiv = document.createElement("div");
     newDiv.className = "col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3";
     newDiv.innerHTML = innerText;
     countryContainer.appendChild(newDiv);
   }
+  var darktheme = document.getElementById("dark-themeButton");
+      darktheme.onclick = function(){
+        document.body.classList.toggle("dark-theme")
+      }
+
+
+  
